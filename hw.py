@@ -111,21 +111,21 @@ with tab2:
         fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
         ax = axes[0]
-        ax.scatter(Xt["로그 원수 탁도"], yt, s=3, label="실제")
-        ax.scatter(Xt["로그 원수 탁도"], yt_pred, s=3, label="예측", c="r")
+        ax.scatter(Xt["로그 원수 탁도"], yt, s=3, label="Real")
+        ax.scatter(Xt["로그 원수 탁도"], yt_pred, s=3, label="Prediction", c="r")
         ax.grid()
         ax.legend(fontsize=10)
-        ax.set_xlabel("로그 원수 탁도")
-        ax.set_ylabel("로그 응집제 주입률")
+        ax.set_xlabel("Log Raw Water Turbidity")
+        ax.set_ylabel("Log Flocculant Injection Rate")
         ax.set_title(f"Train MSE: {mse_train:.4f}, R²: {r2_train:.2f}")
 
         ax = axes[1]
-        ax.scatter(Xts["로그 원수 탁도"], yts, s=3, label="실제")
-        ax.scatter(Xts["로그 원수 탁도"], yts_pred, s=3, label="예측", c="r")
+        ax.scatter(Xts["로그 원수 탁도"], yts, s=3, label="Real")
+        ax.scatter(Xts["로그 원수 탁도"], yts_pred, s=3, label="Prediction", c="r")
         ax.grid()
         ax.legend(fontsize=10)
-        ax.set_xlabel("로그 원수 탁도")
-        ax.set_ylabel("로그 응집제 주입률")
+        ax.set_xlabel("Log Raw Water Turbidity")
+        ax.set_ylabel("Log Flocculant Injection Rate")
         ax.set_title(f"Test MSE: {mse_test:.4f}, R²: {r2_test:.2f}")
 
         st.pyplot(fig)
